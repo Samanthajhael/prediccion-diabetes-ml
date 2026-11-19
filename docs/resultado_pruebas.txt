@@ -1,0 +1,13 @@
+﻿test_estado PASSED
+test_resumen_dataset PASSED
+test_entrenar_cada_algoritmo[regresion_logistica] PASSED
+test_entrenar_cada_algoritmo[random_forest] PASSED
+test_entrenar_cada_algoritmo[svm] PASSED
+test_entrenar_cada_algoritmo[knn] PASSED
+test_entrenar_cada_algoritmo[gradient_boosting] PASSED
+test_parametros_configurables PASSED
+test_parametro_invalido PASSED
+test_predecir_caso_nuevo PASSED
+test_predecir_campos_opcionales PASSED
+test_predecir_valor_fuera_de_rango PASSED
+======================= 12 passed, 1 warning in 32.72s ========================

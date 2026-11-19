@@ -1,0 +1,263 @@
+{
+ "regresion_logistica": {
+  "metricas_prueba": {
+   "accuracy": 0.7338,
+   "precision": 0.6032,
+   "recall": 0.7037,
+   "f1": 0.6496,
+   "roc_auc": 0.8126
+  },
+  "validacion_cruzada": {
+   "accuracy": {
+    "media": 0.7622,
+    "desv": 0.0111
+   },
+   "f1": {
+    "media": 0.6724,
+    "desv": 0.0133
+   },
+   "roc_auc": {
+    "media": 0.8444,
+    "desv": 0.0161
+   },
+   "recall": {
+    "media": 0.701,
+    "desv": 0.0395
+   }
+  },
+  "matriz_confusion": [
+   [
+    75,
+    25
+   ],
+   [
+    16,
+    38
+   ]
+  ],
+  "importancia_variables": {
+   "Glucose": 0.1533,
+   "BMI": 0.0306,
+   "Pregnancies": 0.0247,
+   "DiabetesPedigreeFunction": 0.0101,
+   "Age": 0.0045,
+   "Insulin": 0.0016,
+   "BloodPressure": 0.001,
+   "SkinThickness": 0.0004
+  },
+  "parametros": {
+   "C": 1.0,
+   "max_iter": 1000,
+   "class_weight": "balanced"
+  }
+ },
+ "random_forest": {
+  "metricas_prueba": {
+   "accuracy": 0.7403,
+   "precision": 0.6029,
+   "recall": 0.7593,
+   "f1": 0.6721,
+   "roc_auc": 0.8206
+  },
+  "validacion_cruzada": {
+   "accuracy": {
+    "media": 0.7589,
+    "desv": 0.0178
+   },
+   "f1": {
+    "media": 0.6824,
+    "desv": 0.0195
+   },
+   "roc_auc": {
+    "media": 0.8371,
+    "desv": 0.0221
+   },
+   "recall": {
+    "media": 0.7427,
+    "desv": 0.0281
+   }
+  },
+  "matriz_confusion": [
+   [
+    73,
+    27
+   ],
+   [
+    13,
+    41
+   ]
+  ],
+  "importancia_variables": {
+   "Glucose": 0.0827,
+   "BMI": 0.0453,
+   "Age": 0.023,
+   "DiabetesPedigreeFunction": 0.0062,
+   "Pregnancies": 0.0049,
+   "Insulin": 0.0041,
+   "SkinThickness": -0.0011,
+   "BloodPressure": -0.0065
+  },
+  "parametros": {
+   "n_estimators": 300,
+   "max_depth": 6,
+   "min_samples_leaf": 2,
+   "class_weight": "balanced"
+  }
+ },
+ "svm": {
+  "metricas_prueba": {
+   "accuracy": 0.7468,
+   "precision": 0.6596,
+   "recall": 0.5741,
+   "f1": 0.6139,
+   "roc_auc": 0.8139
+  },
+  "validacion_cruzada": {
+   "accuracy": {
+    "media": 0.7671,
+    "desv": 0.0293
+   },
+   "f1": {
+    "media": 0.6476,
+    "desv": 0.0288
+   },
+   "roc_auc": {
+    "media": 0.8371,
+    "desv": 0.0309
+   },
+   "recall": {
+    "media": 0.6121,
+    "desv": 0.0437
+   }
+  },
+  "matriz_confusion": [
+   [
+    84,
+    16
+   ],
+   [
+    23,
+    31
+   ]
+  ],
+  "importancia_variables": {
+   "Glucose": 0.1021,
+   "Age": 0.039,
+   "BMI": 0.027,
+   "DiabetesPedigreeFunction": 0.0179,
+   "Insulin": 0.0102,
+   "Pregnancies": 0.0093,
+   "BloodPressure": -0.0005,
+   "SkinThickness": -0.0016
+  },
+  "parametros": {
+   "C": 1.0,
+   "kernel": "rbf",
+   "gamma": "scale",
+   "class_weight": "balanced"
+  }
+ },
+ "knn": {
+  "metricas_prueba": {
+   "accuracy": 0.7338,
+   "precision": 0.6444,
+   "recall": 0.537,
+   "f1": 0.5859,
+   "roc_auc": 0.8069
+  },
+  "validacion_cruzada": {
+   "accuracy": {
+    "media": 0.7655,
+    "desv": 0.0315
+   },
+   "f1": {
+    "media": 0.6285,
+    "desv": 0.0458
+   },
+   "roc_auc": {
+    "media": 0.8328,
+    "desv": 0.0324
+   },
+   "recall": {
+    "media": 0.5707,
+    "desv": 0.0673
+   }
+  },
+  "matriz_confusion": [
+   [
+    84,
+    16
+   ],
+   [
+    25,
+    29
+   ]
+  ],
+  "importancia_variables": {
+   "Glucose": 0.0915,
+   "BMI": 0.0408,
+   "Age": 0.0339,
+   "DiabetesPedigreeFunction": 0.03,
+   "SkinThickness": 0.0168,
+   "Pregnancies": 0.0099,
+   "Insulin": 0.0079,
+   "BloodPressure": 0.0063
+  },
+  "parametros": {
+   "n_neighbors": 15,
+   "weights": "distance"
+  }
+ },
+ "gradient_boosting": {
+  "metricas_prueba": {
+   "accuracy": 0.7468,
+   "precision": 0.6667,
+   "recall": 0.5556,
+   "f1": 0.6061,
+   "roc_auc": 0.8302
+  },
+  "validacion_cruzada": {
+   "accuracy": {
+    "media": 0.7492,
+    "desv": 0.0209
+   },
+   "f1": {
+    "media": 0.6151,
+    "desv": 0.024
+   },
+   "roc_auc": {
+    "media": 0.8226,
+    "desv": 0.0168
+   },
+   "recall": {
+    "media": 0.5748,
+    "desv": 0.0372
+   }
+  },
+  "matriz_confusion": [
+   [
+    85,
+    15
+   ],
+   [
+    24,
+    30
+   ]
+  ],
+  "importancia_variables": {
+   "Glucose": 0.0991,
+   "BMI": 0.0575,
+   "Age": 0.0279,
+   "Pregnancies": 0.0182,
+   "DiabetesPedigreeFunction": 0.018,
+   "Insulin": 0.0111,
+   "SkinThickness": 0.0018,
+   "BloodPressure": -0.0045
+  },
+  "parametros": {
+   "n_estimators": 150,
+   "learning_rate": 0.05,
+   "max_depth": 3
+  }
+ }
+}

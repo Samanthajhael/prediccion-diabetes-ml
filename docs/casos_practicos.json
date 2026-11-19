@@ -1,0 +1,44 @@
+[
+ {
+  "nombre": "Caso A",
+  "datos": {
+   "Pregnancies": 1,
+   "Glucose": 95,
+   "BloodPressure": 70,
+   "SkinThickness": null,
+   "Insulin": null,
+   "BMI": 23.5,
+   "DiabetesPedigreeFunction": 0.25,
+   "Age": 26
+  },
+  "resultado": {
+   "probabilidad_diabetes": 0.0407,
+   "prediccion": 0,
+   "etiqueta": "Negativo: sin indicios de diabetes",
+   "nivel_riesgo": "Bajo",
+   "modelo": "Random Forest",
+   "aviso": "Herramienta educativa: no reemplaza el diagnóstico de un profesional de la salud."
+  }
+ },
+ {
+  "nombre": "Caso B",
+  "datos": {
+   "Pregnancies": 4,
+   "Glucose": 180,
+   "BloodPressure": 85,
+   "SkinThickness": 32,
+   "Insulin": null,
+   "BMI": 38.0,
+   "DiabetesPedigreeFunction": 0.9,
+   "Age": 52
+  },
+  "resultado": {
+   "probabilidad_diabetes": 0.8906,
+   "prediccion": 1,
+   "etiqueta": "Positivo: riesgo de diabetes",
+   "nivel_riesgo": "Alto",
+   "modelo": "Random Forest",
+   "aviso": "Herramienta educativa: no reemplaza el diagnóstico de un profesional de la salud."
+  }
+ }
+]

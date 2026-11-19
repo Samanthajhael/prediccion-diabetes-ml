@@ -2,6 +2,7 @@
 
 Proyecto Final · **Proyectos de Machine Learning** · Instituto Superior Tecnológico CENESTUR
 Tecnología Superior en Big Data e Inteligencia de Negocios · Docente: Ing. Sergio Granizo, MSc. · Período 2026-2
+Autora: Samantha Espinosa
 
 Aplicación en Python con **backend** (API REST en FastAPI) y **frontend** (interfaz gráfica en Streamlit). La aplicación:
 
@@ -80,6 +81,10 @@ curl -X POST http://127.0.0.1:8000/predecir -H "Content-Type: application/json" 
 python -m pytest -q
 ```
 
-## Trabajo en equipo (GitHub)
+## Repositorio
 
-Cada integrante debe clonar el repositorio público y subir **commits progresivos desde su propia cuenta**, por ejemplo con ramas por funcionalidad (`feature/frontend-metricas`, `feature/api-prediccion`) y *pull requests*.
+Autora: **Samantha Espinosa** (integrante única) · https://github.com/Samanthajhael/prediccion-diabetes-ml
+
+```bash
+git clone https://github.com/Samanthajhael/prediccion-diabetes-ml.git
+```

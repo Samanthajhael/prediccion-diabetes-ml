@@ -17,7 +17,7 @@ AZULES = ["#0B2E59", "#2171B5", "#6BAED6", "#9ECAE1", "#C6DBEF"]
 st.set_page_config(page_title="Predicción de Diabetes · ML", page_icon="🩺", layout="wide")
 
 
-# ------------------------------------------------------------------ utilidades
+# Funciones de apoyo
 def api(metodo: str, ruta: str, **kwargs):
     try:
         r = requests.request(metodo, f"{API_URL}{ruta}", timeout=120, **kwargs)
@@ -85,7 +85,7 @@ def graficos_metricas(info: dict, prefijo: str):
 tab_datos, tab_entrenar, tab_metricas, tab_predecir, tab_historial = st.tabs(
     ["📊 Datos", "⚙️ Entrenamiento", "📈 Métricas", "🧑‍⚕️ Nuevo caso", "🕘 Historial"])
 
-# ------------------------------------------------------------------ datos
+# Pestaña: Datos
 with tab_datos:
     st.header("Exploración del dataset")
     r = api("GET", "/dataset/resumen")
@@ -110,7 +110,7 @@ with tab_datos:
         st.subheader("Primeros registros")
         st.dataframe(pd.DataFrame(r["muestra"]), use_container_width=True)
 
-# ------------------------------------------------------------------ entrenamiento
+# Pestaña: Entrenamiento
 with tab_entrenar:
     st.header("Configurar y entrenar el modelo")
     algoritmos = api("GET", "/algoritmos") or {}
@@ -147,7 +147,7 @@ with tab_entrenar:
                 tarjetas_metricas(res["metricas_prueba"])
                 graficos_metricas(res, "entrenar")
 
-# ------------------------------------------------------------------ métricas
+# Pestaña: Métricas
 with tab_metricas:
     st.header("Métricas del modelo activo")
     info = api("GET", "/metricas")
@@ -165,7 +165,7 @@ with tab_metricas:
                 "- **F1-score:** equilibrio entre precisión y sensibilidad.\n"
                 "- **ROC AUC:** capacidad de separar ambas clases (1 = perfecto, 0,5 = azar).")
 
-# ------------------------------------------------------------------ nuevo caso
+# Pestaña: Nuevo caso
 with tab_predecir:
     st.header("Evaluar un caso nuevo")
     st.caption("Ingrese los datos clínicos. Pliegue cutáneo e insulina son opcionales: si se dejan en 0, el modelo los imputa.")
@@ -205,7 +205,7 @@ with tab_predecir:
                         f"- **Probabilidad:** {prob:.1%}\n- **Modelo usado:** {res['modelo']}")
             c2.info(res["aviso"])
 
-# ------------------------------------------------------------------ historial
+# Pestaña: Historial
 with tab_historial:
     st.header("Historial de entrenamientos")
     hist = api("GET", "/historial") or []
@@ -223,7 +223,7 @@ with tab_historial:
     else:
         st.info("Todavía no hay entrenamientos registrados.")
 
-# ------------------------------------------------------------------ barra lateral (al final, para mostrar el modelo activo tras entrenar)
+# Barra lateral (al final, para mostrar el modelo activo tras entrenar)
 with st.sidebar:
     st.title("🩺 Predicción de Diabetes")
     st.caption("Proyecto Final · Proyectos de Machine Learning · CENESTUR")

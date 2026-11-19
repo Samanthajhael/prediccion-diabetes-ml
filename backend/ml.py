@@ -110,7 +110,6 @@ ALGORITMOS: dict[str, dict[str, Any]] = {
 }
 
 
-# ------------------------------------------------------------------ datos
 def cargar_datos(ruta: Path = RUTA_DATOS) -> pd.DataFrame:
     """Lee el CSV original, valida columnas y convierte los ceros imposibles en NaN."""
     df = pd.read_csv(ruta)
@@ -136,7 +135,6 @@ def resumen_datos() -> dict[str, Any]:
     }
 
 
-# ------------------------------------------------------------------ modelos
 def _limpiar_parametros(algoritmo: str, parametros: dict[str, Any] | None) -> dict[str, Any]:
     if algoritmo not in ALGORITMOS:
         raise ValueError(f"Algoritmo desconocido: {algoritmo}. Opciones: {list(ALGORITMOS)}")
